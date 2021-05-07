@@ -168,14 +168,14 @@ namespace SmartSolrSchema.Pipelines.SolrProvider
                 }
             });
         }
-
+        
         private IEnumerable<XElement> GetAddFields()
         {
             yield return CreateField("_content", "text_general", required: false, indexed: true, stored: false, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_database", "string", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_path", "string", required: false, indexed: true, stored: false, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_database", "lowercase", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_path", "string", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_uniqueid", "string", required: true, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_datasource", "string", required: true, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_datasource", "lowercase", required: true, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_parent", "string", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_name", "text_general", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_displayname", "text_general", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
@@ -186,13 +186,13 @@ namespace SmartSolrSchema.Pipelines.SolrProvider
             yield return CreateField("_updated", "pdate", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_hidden", "boolean", required: false, indexed: true, stored: false, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_template", "lowercase", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_templatename", "string", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_templatename", "lowercase", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_templates", "string", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_icon", "string", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_links", "string", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_tags", "string", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_icon", "lowercase", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_links", "lowercase", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_tags", "lowercase", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_group", "string", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
-            yield return CreateField("_indexname", "string", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
+            yield return CreateField("_indexname", "lowercase", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_latestversion", "boolean", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_indextimestamp", "pdate", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, "NOW");
             yield return CreateField("_fullpath", "lowercase", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
@@ -213,7 +213,7 @@ namespace SmartSolrSchema.Pipelines.SolrProvider
             yield return CreateField("__hidden", "boolean", required: false, indexed: true, stored: false, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("_version_", "plong", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false);
             yield return CreateField("*_t", "text_general", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
-            yield return CreateField("*_t_en", "text_general", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
+            yield return CreateField("*_t_en", "text_en", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_t_ar", "text_ar", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_t_bg", "text_bg", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_t_ca", "text_ca", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
@@ -246,6 +246,8 @@ namespace SmartSolrSchema.Pipelines.SolrProvider
             yield return CreateField("*_i", "pint", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_s", "string", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_sm", "string", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
+            yield return CreateField("*_ls", "lowercase", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
+            yield return CreateField("*_lsm", "lowercase", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_im", "pint", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_txm", "text_general", required: false, indexed: true, stored: true, multiValued: true, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
             yield return CreateField("*_b", "boolean", required: false, indexed: true, stored: true, multiValued: false, omitNorms: false, termVectors: false, termPositions: false, termOffsets: false, null, isDynamic: true);
