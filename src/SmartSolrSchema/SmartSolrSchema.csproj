@@ -5,10 +5,11 @@
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<Description>Smart Solr Schema Populate Module for Sitecore</Description>
 		<Version>0.2.0-SC101</Version>
+		<Version>1.0.0</Version>
 		<Authors>Mark Gibbons</Authors>
 		<PackageProjectUrl></PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<RepositoryUrl></RepositoryUrl>
+		<RepositoryUrl>https://github.com/dataweaversio/SmartSolrSchema</RepositoryUrl>
 		<PackageIconUrl></PackageIconUrl>
 		<PackageTags>sitecore solr</PackageTags>
 		<Copyright>Copyright Dataweavers 2021</Copyright>
@@ -16,6 +17,11 @@
 		<Product />
 		<AssemblyName>SmartSolrSchema</AssemblyName>
 		<RootNamespace>SmartSolrSchema</RootNamespace>
+		<Company>Dataweavers</Company>
+		<Product />
+		<PackageId>SmartSolrSchema.SC91-100</PackageId>
+		<Description>Smart Solr Schema Populate Module for Sitecore 9.1 - 10.0</Description>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net471'">
 		<PackageReference Include="Sitecore.Kernel">
