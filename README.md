@@ -23,6 +23,7 @@ That is a very manual process and makes the DevOps side of things much more tric
 * Sitecore 9.2.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
 * Sitecore 9.3.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
 * Sitecore 10.0.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
+* Sitecore 10.1.x - Supported - Use the [SmartSolrSchema.SC101](https://www.nuget.org/packages/SmartSolrSchema.SC101) nuget package
 
 ## How to install
 

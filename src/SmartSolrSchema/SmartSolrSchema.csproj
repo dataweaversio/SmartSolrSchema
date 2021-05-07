@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net471;net472;net48</TargetFrameworks>
+		<TargetFrameworks>net48</TargetFrameworks>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<Description>Smart Solr Schema Populate Module for Sitecore</Description>
-		<Version>0.2.0-SC101</Version>
 		<Version>1.0.0</Version>
 		<Authors>Mark Gibbons</Authors>
 		<PackageProjectUrl></PackageProjectUrl>
@@ -19,31 +17,11 @@
 		<RootNamespace>SmartSolrSchema</RootNamespace>
 		<Company>Dataweavers</Company>
 		<Product />
-		<PackageId>SmartSolrSchema.SC91-100</PackageId>
-		<Description>Smart Solr Schema Populate Module for Sitecore 9.1 - 10.0</Description>
+		<PackageId>SmartSolrSchema.SC101</PackageId>
+		<Description>Smart Solr Schema Populate Module for Sitecore 10.1</Description>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net471'">
-		<PackageReference Include="Sitecore.Kernel">
-			<Version>9.1.0</Version>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="Sitecore.ContentSearch.SolrProvider">
-			<Version>9.1.0</Version>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net472'">
-		<PackageReference Include="Sitecore.Kernel">
-			<Version>9.2.0</Version>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="Sitecore.ContentSearch.SolrProvider">
-			<Version>9.2.0</Version>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+	<ItemGroup>
 		<PackageReference Include="Sitecore.Kernel">
 			<Version>10.1.0</Version>
 			<PrivateAssets>all</PrivateAssets>
