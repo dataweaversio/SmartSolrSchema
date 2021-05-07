@@ -19,10 +19,10 @@ That is a very manual process and makes the DevOps side of things much more tric
 * Sitecore 7.x - Not Supported
 * Sitecore 8.x - Not Supported
 * Sitecore 9.0.x - Not Supported
-* Sitecore 9.1.x - Supported
-* Sitecore 9.2.x - Supported
-* Sitecore 9.3.x - Supported
-* Sitecore 10.0.x - Supported
+* Sitecore 9.1.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
+* Sitecore 9.2.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
+* Sitecore 9.3.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
+* Sitecore 10.0.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
 
 ## How to install
 
@@ -40,3 +40,7 @@ That is a very manual process and makes the DevOps side of things much more tric
 5. Close the dialog and open the Indexing Manager
 6. Rebuild the indexes
 7. You can check the Crawling log file to make sure you're not getting errors about unknown fields.
+
+## Who
+
+This module is written and maintained by [Mark Gibbons](https://github.com/markgibbons25) and other people in the Dataweavers team.
