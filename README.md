@@ -24,13 +24,13 @@ That is a very manual process and makes the DevOps side of things much more tric
 * Sitecore 9.3.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
 * Sitecore 10.0.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
 * Sitecore 10.1.x - Supported - Use the [SmartSolrSchema.SC101](https://www.nuget.org/packages/SmartSolrSchema.SC101) nuget package
+* Sitecore 10.2.x - Supported - Use the [SmartSolrSchema.SC101](https://www.nuget.org/packages/SmartSolrSchema.SC101) nuget package
 
 ## How to install
 
 1. Install the nuget package.
-2. If you're using PackageReferences then you'll also need to copy in the example `PopulateSolrSchema.config`
-3. Modify `PopulateSolrSchema.config` by uncommenting the relevant section based on your Sitecore version
-4. Build your solution and ensure the `SmartSolrSchema.dll` and `PopulateSolrSchema.config` are deployed
+2. If you're using PackageReferences then you'll also need to copy in the configs in the package `App_Config/Modules/SmartSolrSchema`
+3. Build your solution and ensure the `SmartSolrSchema.dll` and configs are deployed
 
 ## How to use
 
@@ -41,6 +41,17 @@ That is a very manual process and makes the DevOps side of things much more tric
 5. Close the dialog and open the Indexing Manager
 6. Rebuild the indexes
 7. You can check the Crawling log file to make sure you're not getting errors about unknown fields.
+
+## Date Sorting
+
+There is a somewhat common issue with sorting by date fields in Solr where it does not always sort correctly. It happens more often if you have a lot of items that you are searching and ordering.
+This has been blogged about [here](https://www.sitecorenutsbolts.net/2014/11/06/Sitecore-Sorting-by-Date-with-SOLR/) by Rich Seal, where the fix is to add a date field to the solr managed schema that is `indexed="true" stored="false"`.
+I have made this easier for you by automatically adding a `*_tdts` dynamic field with this setting. You can then use it in your project as follows:
+
+1. Open the `App_Config/Modules/SmartSolrSchema/DateTimeSortable.config` and uncomment the example computed field. Update the `fieldName` parameter with your field name.
+2. Add as many fields as you need to sort by here.
+3. Build and deploy your solution and do a full index rebuild
+4. You can now sort by `fieldname_tdts` which will return accurate results.
 
 ## Who
 
