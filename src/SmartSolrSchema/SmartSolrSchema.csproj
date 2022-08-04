@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net48</TargetFrameworks>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<Version>1.1.0</Version>
+		<Version>1.1.1</Version>
 		<Authors>Mark Gibbons</Authors>
 		<PackageProjectUrl></PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -32,19 +32,14 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-	  <None Remove="App_Config\Modules\SmartSolrSchema\DateTimeSortable.config" />
-	  <None Remove="App_Config\Modules\SmartSolrSchema\PopulateSolrSchema.config" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Content Include="App_Config\Modules\SmartSolrSchema\DateTimeSortable.config" />
-	  <Content Include="App_Config\Modules\SmartSolrSchema\PopulateSolrSchema.config" />
-	</ItemGroup>
-	<ItemGroup>
 		<Reference Include="System" />
 		<Reference Include="System.Configuration" />
 		<Reference Include="System.Core" />
 		<Reference Include="System.Drawing" />
 		<Reference Include="System.Web" />
 		<Reference Include="System.XML" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="App_Config\**\*" PackagePath="content\App_Config" />
 	</ItemGroup>
 </Project>
