@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net48</TargetFrameworks>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<Version>1.1.1</Version>
+		<Version>1.1.2</Version>
 		<Authors>Mark Gibbons</Authors>
 		<PackageProjectUrl></PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -18,7 +18,7 @@
 		<Company>Dataweavers</Company>
 		<Product />
 		<PackageId>SmartSolrSchema.SC101</PackageId>
-		<Description>Smart Solr Schema Populate Module for Sitecore 10.1</Description>
+		<Description>Smart Solr Schema Populate Module for Sitecore 10.1, 10.2, 10.3</Description>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 	<ItemGroup>

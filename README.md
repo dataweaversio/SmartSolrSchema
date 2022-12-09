@@ -25,6 +25,7 @@ That is a very manual process and makes the DevOps side of things much more tric
 * Sitecore 10.0.x - Supported - Use the [SmartSolrSchema.SC91-100](https://www.nuget.org/packages/SmartSolrSchema.SC91-100) nuget package
 * Sitecore 10.1.x - Supported - Use the [SmartSolrSchema.SC101](https://www.nuget.org/packages/SmartSolrSchema.SC101) nuget package
 * Sitecore 10.2.x - Supported - Use the [SmartSolrSchema.SC101](https://www.nuget.org/packages/SmartSolrSchema.SC101) nuget package
+* Sitecore 10.3.x - Supported - Use the [SmartSolrSchema.SC101](https://www.nuget.org/packages/SmartSolrSchema.SC101) nuget package
 
 ## How to install
 
@@ -41,6 +42,10 @@ That is a very manual process and makes the DevOps side of things much more tric
 5. Close the dialog and open the Indexing Manager
 6. Rebuild the indexes
 7. You can check the Crawling log file to make sure you're not getting errors about unknown fields.
+
+## Date *_dtm Bugfix
+
+This module also fixes a Sitecore bug where Solr datetimeCollection has fieldNameFormat="{0}_dtm" but the schema builder format is "*_tdtm"
 
 ## Date Sorting
 
